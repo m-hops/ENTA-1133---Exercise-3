@@ -1,0 +1,7 @@
+C:\Users\s2433016\source\repos\DiceRoll\DiceRoll\bin\Debug\DiceRoll.exe.config
+C:\Users\s2433016\source\repos\DiceRoll\DiceRoll\bin\Debug\DiceRoll.exe
+C:\Users\s2433016\source\repos\DiceRoll\DiceRoll\bin\Debug\DiceRoll.pdb
+C:\Users\s2433016\source\repos\DiceRoll\DiceRoll\obj\Debug\DiceRoll.csproj.AssemblyReference.cache
+C:\Users\s2433016\source\repos\DiceRoll\DiceRoll\obj\Debug\DiceRoll.csproj.CoreCompileInputs.cache
+C:\Users\s2433016\source\repos\DiceRoll\DiceRoll\obj\Debug\DiceRoll.exe
+C:\Users\s2433016\source\repos\DiceRoll\DiceRoll\obj\Debug\DiceRoll.pdb
