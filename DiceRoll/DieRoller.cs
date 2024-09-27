@@ -8,23 +8,11 @@ namespace Lab2
 {
     internal class DieRoller
     {
-        public void Roll()
+        public int Roll(int maxVal)
         {
             Random RNG = new Random();
-            int D4 = RNG.Next(1,5);
-            int D6 = RNG.Next(1, 7);
-            int D10 = RNG.Next(1, 11);
-            int D20 = RNG.Next(1, 21);
-
-            int total = D4 + D6 + D10 + D20;
-
-            Console.WriteLine("Roll Results:");
-            Console.WriteLine("D4 = " + D4);
-            Console.WriteLine("D6 = " + D6);
-            Console.WriteLine("D10 = " + D10);
-            Console.WriteLine("D20 = " + D20);
-
-            Console.WriteLine("Your final score is " + total);
+            int rollVal = RNG.Next(1,maxVal+1);
+            return rollVal;
 
         }
     }
