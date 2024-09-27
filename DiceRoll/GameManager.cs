@@ -52,13 +52,16 @@ namespace Lab2
 
         public void Combat()
         {
-            Console.WriteLine("While out on a scouting mission, " + playerName + " recieves a transmission from a nearby ship.");
+            Console.WriteLine("");
+            Console.WriteLine("While out on a scouting mission, Captain " + playerName + " recieves a transmission from a nearby ship.");
             Console.WriteLine("");
             Console.WriteLine("'Attention captain of the " + shipName + "! Prepared to be fired upon because I think you suck.'");
             Console.WriteLine("");
             Console.WriteLine("What weapon will you choose to fire?");
             Console.WriteLine("");
+            Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("D6 - Laser // D10 - Missle // D12 - Torpedo // D20 - Nuke");
+            Console.WriteLine("");
 
             playerInput = Console.ReadLine().ToLower();
 
