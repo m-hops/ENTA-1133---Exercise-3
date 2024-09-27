@@ -17,7 +17,7 @@ namespace Lab2
         public int pScore;
         public int cScore;
 
-        public int rollDelay = 6000;
+        DieRoller roll = new DieRoller();
 
         public void GameLoop()
         {
@@ -68,12 +68,9 @@ namespace Lab2
             if (playerInput == "d6" || playerInput == "6" || playerInput == "laser")
             {
                 weaponUsed = "laser";
-                DieRoller pRoll = new DieRoller();
-                DieRoller cRoll = new DieRoller();
 
-                pScore = pRoll.Roll(6);
-                Task.Delay(rollDelay);
-                cScore = cRoll.Roll(6);
+                pScore = roll.Roll(6);
+                cScore = roll.Roll(6);
 
                 Console.WriteLine("");
                 Console.WriteLine("You fire your ships " + weaponUsed + " for " + pScore + " damage");
@@ -83,12 +80,9 @@ namespace Lab2
             } else if (playerInput == "d10" || playerInput == "10" || playerInput == "missle")
             {
                 weaponUsed = "missle";
-                DieRoller pRoll = new DieRoller();
-                DieRoller cRoll = new DieRoller();
 
-                pScore = pRoll.Roll(10);
-                Task.Delay(rollDelay);
-                cScore = cRoll.Roll(10);
+                pScore = roll.Roll(10);
+                cScore = roll.Roll(10);
 
                 Console.WriteLine("");
                 Console.WriteLine("You fire your ships " + weaponUsed + " for " + pScore + " damage");
@@ -98,12 +92,9 @@ namespace Lab2
             } else if (playerInput == "d12" || playerInput == "12" || playerInput == "torpedo")
             {
                 weaponUsed = "torpedo";
-                DieRoller pRoll = new DieRoller();
-                DieRoller cRoll = new DieRoller();
 
-                pScore = pRoll.Roll(12);
-                Task.Delay(rollDelay);
-                cScore = cRoll.Roll(12);
+                pScore = roll.Roll(12);
+                cScore = roll.Roll(12);
 
                 Console.WriteLine("");
                 Console.WriteLine("You fire your ships " + weaponUsed + " for " + pScore + " damage.");
@@ -113,12 +104,9 @@ namespace Lab2
             } else if (playerInput == "d20" || playerInput == "20" || playerInput == "nuke")
             {
                 weaponUsed = "nuke";
-                DieRoller pRoll = new DieRoller();
-                DieRoller cRoll = new DieRoller();
 
-                pScore = pRoll.Roll(20);
-                Task.Delay(rollDelay);
-                cScore = cRoll.Roll(20);
+                pScore = roll.Roll(20);
+                cScore = roll.Roll(20);
 
                 Console.WriteLine("");
                 Console.WriteLine("You fire your ships " + weaponUsed + " for " + pScore + " damage.");
@@ -127,12 +115,9 @@ namespace Lab2
 
             } else
             {
-                DieRoller pRoll = new DieRoller();
-                DieRoller cRoll = new DieRoller();
 
-                pScore = pRoll.Roll(0);
-                Task.Delay(rollDelay);
-                cScore = cRoll.Roll(20);
+                pScore = roll.Roll(0);
+                cScore = roll.Roll(20);
 
                 Console.WriteLine("");
                 Console.WriteLine("The " + shipName + "s computer informs you your weapons systems have locked up.");
@@ -144,7 +129,6 @@ namespace Lab2
 
         public void End()
         {
-
             if (pScore > cScore)
             {
                 Console.WriteLine("You dodge the attack, but your opponent isn't so lucky as they're blasted into space dust.");
@@ -169,7 +153,7 @@ namespace Lab2
             Console.WriteLine("Would you like to play again?[y/n]");
             Console.WriteLine("");
 
-            playerInput = Console.ReadLine();
+            playerInput = Console.ReadLine().ToLower(); 
 
             if (playerInput == "y" || playerInput == "yes") {
 
